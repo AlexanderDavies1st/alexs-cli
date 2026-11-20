@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's CLI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <img src="assets/static.gif">
+        <input type="file" id="fileInput" />
+    </div>
+    <div class="terminal" onclick="document.getElementById('cmd-input').focus()">
+<pre class="no-del"><samp>Welcome to Alex's CLI
+Type <span class="highlight">'help'</span> to see available commands.</samp></pre>
+
+            <form class="prompt-line no-del" id="cmd-form" onsubmit="runCommand(event)">
+                <span id="active-prompt" class="prompt">user@web:~$</span>
+                <input type="text" id="cmd-input" autofocus autocomplete="off" spellcheck="false" />
+            </form>
+  </div>
+</body>
+</html>
